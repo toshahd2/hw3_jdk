@@ -1,10 +1,9 @@
 package task3;
 
-public class Array {
+public class ArrayComp {
 
-    public <T> boolean compareArrays(T[] arr1, T[] arr2, boolean checkElType) {
-        boolean check = typeCheck(arr1) && typeCheck(arr2);
-        if (checkElType && !check) {
+    public <T> boolean compareArrays(T[] arr1, T[] arr2) {
+        if (typeCheck(arr1) && !typeCheck(arr2)) {
             return false;
         }
         return arr1.length == arr2.length;
